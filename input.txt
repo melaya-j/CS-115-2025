@@ -1,0 +1,46 @@
+import java.io.*;
+import java.util.*;
+   
+public class Lab09 {
+   public static void main(String[] args) {
+    String filename = "input.txt";
+
+
+try{
+    List<Double> numbers = new ArrayList<>();
+    FileReader fileReader = new FileReader(filename);
+    BufferedReader bufferedReader = new BufferedReader(fileReader);
+    String line;
+
+    while ((line = bufferedReader.readLine()) != null) {
+        numbers.add( Double.parseDouble ( line.trim()));
+    }
+    bufferedReader.close();
+
+// Calculate the average
+double sum = 0;
+for (double num : numbers) {
+    sum += num;
+}
+double average = sum / numbers.size();
+System.out.println("Average of numbers: " + average);
+
+List<Double> newNumbers = Arrays.asList(10.1, 12.4, 5.5, 8.8, 6.6, 11.2, 9.9);
+numbers.addAll(newNumbers);
+// Step 3: Write all numbers back to the file
+BufferedWriter writer = new BufferedWriter(new FileWriter(filename));
+for (double num : numbers) {
+    writer.write(String.valueOf(num));
+    writer.newLine();
+}
+writer.close();
+
+System.out.println("7 new doubles added to the file.");
+    } catch (IOException | NumberFormatException e) {
+    System.err.println("Error: " + e.getMessage());
+    }
+
+}
+
+    }
+   
