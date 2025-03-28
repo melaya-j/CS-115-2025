@@ -1,0 +1,7 @@
+Number 1: B, A Method
+
+Num 2: d, All of the above
+
+Num 3: a, A parameter
+
+Num 4: d, A return Value
