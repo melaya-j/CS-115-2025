@@ -1,0 +1,31 @@
+import java.io.*;
+import java.util.*;
+   
+public class Lab09Start {
+   public static void main(String[] args) {
+        String filename = "start.txt";
+        String outputFile = "newsStart.txt";
+
+    try(BufferedReader  reader =new BufferedReader(new FileReader(inputFile));
+             BufferedWriter writer= new BufferedWriter(new FileWriter(outputFile))) {
+            
+         String line;
+         int lineNumber=1 ;
+            
+            while ((line =reader.readLine()) != null){
+              int charCount =line.length()  ;
+                 writer.write(lineNumber + ": " +charCount+ line);
+                writer.newLine(); 
+              lineNumber =lineNumber+1;  
+              
+            }
+            
+            System.out.println("File processed and saved as " + outputFile);
+            
+    }catch(IOException e){
+            System.out.println("ERROR occurred while reading/writing file.");
+            e.printStackTrace();
+ }
+
+   }
+   }
