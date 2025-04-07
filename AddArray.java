@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class AddArray {
     public static void main(String[] args) {
-        final int ASIZE = 5;
+        final int ASIZE = 4;
         int [] numbers = new int [ASIZE];
         Scanner scanner = new Scanner(System.in);
         //user enter ASIZE int

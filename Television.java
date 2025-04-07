@@ -25,7 +25,7 @@ public class Television {
     }
 
     public boolean equals(Television other) {
-        if (this.brand equals other.brand && this.price == other.price) {
+        if (this.brand == other.brand && this.price == other.price) {
             return true;
         }
         

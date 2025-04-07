@@ -5,7 +5,7 @@ public class MultiplyArray {
         final int ASIZE = 4;
         int [] numbers = new int [ASIZE];
         Scanner scanner = new Scanner(System.in);
-        //user enter ASIZE int
+        //user enter ASIZE product
         System.out.println("Enter:" + ASIZE + " integers:");
 
         for (int i = 0; i < ASIZE; i++) {

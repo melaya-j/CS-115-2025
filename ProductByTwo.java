@@ -23,7 +23,7 @@ public class ProductByTwo {
         System.out.println ("After multiplying each value by 2:");
         for (int i = 0; i < ASIZE; i++) {
             numbers[i] *= 2;
-            System.ot.println("Value " + (i + 1) + "after multiplication:" + numbers[i]);
+            System.out.println("Value " + (i + 1) + "after multiplication:" + numbers[i]);
         }
     }
 }
